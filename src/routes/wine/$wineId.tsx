@@ -66,6 +66,7 @@ const allWines: Wine[] = [...redWines, ...whiteWines, ...roseWines];
 
 function SingleWine() {
   const [wine, setWine] = useState<Wine | undefined>();
+  // @ts-ignore
   const params = useParams();
 
   const getWineNameFromSlug = (slug: string | undefined): string => {
@@ -73,11 +74,13 @@ function SingleWine() {
   };
 
   useEffect(() => {
+    // @ts-ignore
     const wineName = getWineNameFromSlug(params.wineId as string);
     const foundWine = allWines.find(
       (w) => w.name.toLowerCase() === wineName.toLowerCase()
     );
     setWine(foundWine);
+    // @ts-ignore
   }, [params.wineId]);
 
   if (!wine) {

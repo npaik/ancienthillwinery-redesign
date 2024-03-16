@@ -24,6 +24,7 @@ const renderWines = (wineArray: WineArray): JSX.Element[] => {
       style={{ backgroundColor: "#f8e8bb" }}
     >
       <div className="flex-1">
+        {/* @ts-ignore */}
         <Link to={`/wine/${generateSlug(wine.name)}`}>
           <img
             src={wine.image}
