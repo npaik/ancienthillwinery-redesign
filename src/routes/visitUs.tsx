@@ -7,7 +7,7 @@ export const Route = createFileRoute("/visitUs")({
 function ContactUs() {
   return (
     <>
-      <div className="flex justify-center items-center w-full">
+      <div className="flex justify-center items-center w-full mb-10">
         <div className="w-1/3">
           <div className="text-center mt-4">
             <h3 className="text-4xl font-bold mb-6">Visit Us</h3>

@@ -1,8 +1,50 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/ourWines")({
   component: OurWines,
 });
+
+type Wine = {
+  name: string;
+  image: string;
+  description: string;
+  price: string;
+};
+type WineArray = Wine[];
+
+const generateSlug = (name: string): string => {
+  return encodeURIComponent(name.toLowerCase().replace(/\s+/g, "-"));
+};
+
+const renderWines = (wineArray: WineArray): JSX.Element[] => {
+  return wineArray.map((wine, index) => (
+    <div
+      key={index}
+      className="flex flex-col justify-between p-4 rounded-lg shadow-lg"
+      style={{ backgroundColor: "#f8e8bb" }}
+    >
+      <div className="flex-1">
+        <Link to={`/wine/${generateSlug(wine.name)}`}>
+          <img
+            src={wine.image}
+            alt={wine.name}
+            className="h-48 w-full object-contain mb-4"
+          />
+        </Link>
+        <h3 className="text-2xl font-bold my-2 text-center">{wine.name}</h3>
+        <p className="text-md text-center mb-2">{wine.description}</p>
+      </div>
+      <div className="flex flex-col items-center">
+        <p className="text-xl font-semibold my-2 self-stretch text-center">
+          {wine.price}
+        </p>
+        <button className="mt-4 bg-[#5B3003] text-white py-2 px-4 rounded-lg hover:bg-[#42382f] w-full">
+          ADD TO CART
+        </button>
+      </div>
+    </div>
+  ));
+};
 
 function OurWines() {
   const redWines = [
@@ -87,104 +129,26 @@ function OurWines() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 text-center">
           <h2 className="text-4xl font-bold pb-6">Red Wines</h2>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {redWines.map((wine, index) => (
-              <div
-                key={index}
-                className="flex flex-col justify-between p-4 rounded-lg shadow-lg"
-                style={{ backgroundColor: "#f8e8bb" }}
-              >
-                <div className="flex-1">
-                  <img
-                    src={wine.image}
-                    alt={wine.name}
-                    className="h-48 w-full object-contain mb-4"
-                  />
-                  <h3 className="text-2xl font-bold my-2 text-center">
-                    {wine.name}
-                  </h3>
-                  <p className="text-md text-center mb-2">{wine.description}</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <p className="text-xl font-semibold my-2 self-stretch text-center">
-                    {wine.price}
-                  </p>
-                  <button className="mt-4 bg-[#5B3003] text-white py-2 px-4 rounded-lg hover:bg-[#42382f] w-full">
-                    ADD TO CART
-                  </button>
-                </div>
-              </div>
-            ))}
+            {renderWines(redWines)}
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 text-center">
           <h2 className="text-4xl font-bold pb-6">White Wines</h2>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {whiteWines.map((wine, index) => (
-              <div
-                key={index}
-                className="flex flex-col justify-between p-4 rounded-lg shadow-lg"
-                style={{ backgroundColor: "#f8e8bb" }}
-              >
-                <div className="flex-1">
-                  <img
-                    src={wine.image}
-                    alt={wine.name}
-                    className="h-48 w-full object-contain mb-4"
-                  />
-                  <h3 className="text-2xl font-bold my-2 text-center">
-                    {wine.name}
-                  </h3>
-                  <p className="text-md text-center mb-2">{wine.description}</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <p className="text-xl font-semibold my-2 self-stretch text-center">
-                    {wine.price}
-                  </p>
-                  <button className="mt-4 bg-[#5B3003] text-white py-2 px-4 rounded-lg hover:bg-[#42382f] w-full">
-                    ADD TO CART
-                  </button>
-                </div>
-              </div>
-            ))}
+            {renderWines(whiteWines)}
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 text-center">
           <h2 className="text-4xl font-bold pb-6">Rose Wines</h2>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {roseWines.map((wine, index) => (
-              <div
-                key={index}
-                className="flex flex-col justify-between p-4 rounded-lg shadow-lg"
-                style={{ backgroundColor: "#f8e8bb" }}
-              >
-                <div className="flex-1">
-                  <img
-                    src={wine.image}
-                    alt={wine.name}
-                    className="h-48 w-full object-contain mb-4"
-                  />
-                  <h3 className="text-2xl font-bold my-2 text-center">
-                    {wine.name}
-                  </h3>
-                  <p className="text-md text-center mb-2">{wine.description}</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <p className="text-xl font-semibold my-2 self-stretch text-center">
-                    {wine.price}
-                  </p>
-                  <button className="mt-4 bg-[#5B3003] text-white py-2 px-4 rounded-lg hover:bg-[#42382f] w-full">
-                    ADD TO CART
-                  </button>
-                </div>
-              </div>
-            ))}
+            {renderWines(roseWines)}
           </div>
         </div>
+        <p className="mb-4 text-center text-2xl pb-6">
+          Please note: All our wine prices listed here are subject to 5% GST and
+          10% BC PST.
+        </p>
       </div>
-      <p className="mb-4 text-center text-2xl pb-6">
-        Please note: All our wine prices listed here are subject to 5% GST and
-        10% BC PST.
-      </p>
     </>
   );
 }
