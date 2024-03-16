@@ -20,7 +20,7 @@ function RootLayout() {
       <div className="flex flex-col min-h-screen bg-[#f8e8bb]">
         <nav className="bg-[#f8e8bb] shadow-md">
           <div className="flex justify-center px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center space-x-2 md:space-x-14 max-w-7xl mx-auto p-6">
+            <div className="flex items-center space-x-2 md:space-x-14 max-w-7xl mx-auto p-2">
               <Link to="/" className="flex items-center">
                 <img
                   src="/logo.png"
@@ -30,31 +30,31 @@ function RootLayout() {
               </Link>
               <Link
                 to="/aboutUs"
-                className="text-2xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
+                className="text-xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
               >
                 ABOUT US
               </Link>
               <Link
                 to="/ourWines"
-                className="text-2xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
+                className="text-xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
               >
                 OUR WINES
               </Link>
               <Link
                 to="/wineShop"
-                className="text-2xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
+                className="text-xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
               >
                 SHOP & PATIO
               </Link>
               <Link
                 to="/whereToBuy"
-                className="text-2xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
+                className="text-xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
               >
                 WHERE TO BUY
               </Link>
               <Link
                 to="/visitUs"
-                className="text-2xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
+                className="text-xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
               >
                 VISIT US
               </Link>
@@ -68,7 +68,7 @@ function RootLayout() {
 
         <footer className="bg-[#222222] text-[#f8e8bb]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="py-3 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm font-bold text-center">
+            <div className="py-3 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-center">
               <div>
                 <h4 className="mb-3 text-2xl">Address</h4>
                 <p>4918 Anderson Road</p>

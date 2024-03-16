@@ -83,7 +83,7 @@ function WhereToBuy() {
     <>
       <div className="bg-[#f8e8bb] py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-center mb-12">Where to Buy</h1>
+          <h1 className="text-3xl font-bold text-center mb-12">Where to Buy</h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {locations.map((loc, index) => (
               <LocationSection
@@ -102,7 +102,7 @@ function WhereToBuy() {
 function LocationSection({ title, details }: LocationSectionProps) {
   return (
     <div className="shadow-lg rounded-lg p-4 bg-[#f8e8bb]">
-      <h2 className="text-3xl font-semibold mb-4">{title}</h2>
+      <h2 className="text-xl font-semibold mb-4">{title}</h2>
       <ul className="space-y-2">
         {details.map((detail, index) => (
           <li key={index} className="text-lg">
