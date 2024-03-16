@@ -1,10 +1,9 @@
-import { createFileRoute, useParams } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 export const Route = createFileRoute("/wine/$wineId")({
   component: SingleWine,
 });
-
 export type Wine = {
   name: string;
   image: string;
@@ -65,23 +64,20 @@ const roseWines: Wine[] = [
 const allWines: Wine[] = [...redWines, ...whiteWines, ...roseWines];
 
 function SingleWine() {
+  const { wineId } = Route.useParams();
   const [wine, setWine] = useState<Wine | undefined>();
-  // @ts-ignore
-  const params = useParams();
 
   const getWineNameFromSlug = (slug: string | undefined): string => {
     return slug ? decodeURIComponent(slug).replace(/-/g, " ") : "";
   };
 
   useEffect(() => {
-    // @ts-ignore
-    const wineName = getWineNameFromSlug(params.wineId as string);
+    const wineName = getWineNameFromSlug(wineId);
     const foundWine = allWines.find(
       (w) => w.name.toLowerCase() === wineName.toLowerCase()
     );
     setWine(foundWine);
-    // @ts-ignore
-  }, [params.wineId]);
+  }, [wineId]);
 
   if (!wine) {
     return <div>Wine not found.</div>;
