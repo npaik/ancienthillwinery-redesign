@@ -12,10 +12,6 @@ type Wine = {
 };
 type WineArray = Wine[];
 
-const generateSlug = (name: string): string => {
-  return encodeURIComponent(name.toLowerCase().replace(/\s+/g, "-"));
-};
-
 const renderWines = (wineArray: WineArray): JSX.Element[] => {
   return wineArray.map((wine, index) => (
     <div
@@ -24,7 +20,7 @@ const renderWines = (wineArray: WineArray): JSX.Element[] => {
       style={{ backgroundColor: "#f8e8bb" }}
     >
       <div className="flex-1">
-        <Link to={`/wine/$wineId`} params={{ wineId: generateSlug(wine.name) }}>
+        <Link to={`/wine/$wineId`} params={{ wineId: wine.name }}>
           <img
             src={wine.image}
             alt={wine.name}
@@ -57,14 +53,14 @@ function OurWines() {
     },
     {
       name: "2019 Pinot Noir",
-      image: "/pinor-gris-small.jpg",
+      image: "/pinorGris.jpg",
       description:
         "For the Pinot Noir lover. Lighter bodied and delicately oaked. Unique to the micro climate of Ancient Hill.",
       price: "$22.96",
     },
     {
       name: "2019 Baco Noir",
-      image: "/baco-noir-small.jpg",
+      image: "/bacoNoir.jpg",
       description:
         "Our flagship red. Heavier bodied and barrel aged. Bursting with dark, rich fruits.",
       price: "$26.00",
@@ -74,14 +70,14 @@ function OurWines() {
   const whiteWines = [
     {
       name: "2019 Pinot Gris",
-      image: "/pinor-gris-small.jpg",
+      image: "/pinorGris.jpg",
       description:
         "Refreshing and crisp. Unique to the micro climate of Ancient Hill.",
       price: "$20.79",
     },
     {
       name: "2019 Gewurztraminer",
-      image: "/gewurztraminer-small.jpg",
+      image: "/gewurztraminer.jpg",
       description: "Floral and slightly sweet. A delicious Gewurztraminer.",
       price: "$19.91",
     },
@@ -101,7 +97,7 @@ function OurWines() {
     <>
       <div className="flex flex-col bg-[#f8e8bb]">
         <img
-          src="/all-bottles-big.jpg"
+          src="/allBottles.jpg"
           alt="Ancient Hill Vineyard"
           className="w-screen h-[50vh] object-cover"
         />

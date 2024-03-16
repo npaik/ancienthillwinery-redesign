@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for ancienthillwinery-redesign-winter-river-5657 on 2024-02-23T18:10:49-08:00
+# fly.toml app configuration file generated for ancienthillwinery-redesign on 2024-03-16T15:11:25-07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'ancienthillwinery-redesign-winter-river-5657'
+app = 'ancienthillwinery-redesign'
 primary_region = 'sea'
 
 [build]

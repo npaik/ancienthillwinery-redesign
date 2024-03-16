@@ -21,14 +21,14 @@ const redWines: Wine[] = [
   },
   {
     name: "2019 Pinot Noir",
-    image: "/pinor-gris-small.jpg",
+    image: "/pinorGris.jpg",
     description:
       "For the Pinot Noir lover. Lighter bodied and delicately oaked. Unique to the micro climate of Ancient Hill.",
     price: "$22.96",
   },
   {
     name: "2019 Baco Noir",
-    image: "/baco-noir-small.jpg",
+    image: "/bacoNoir.jpg",
     description:
       "Our flagship red. Heavier bodied and barrel aged. Bursting with dark, rich fruits.",
     price: "$26.00",
@@ -38,14 +38,14 @@ const redWines: Wine[] = [
 const whiteWines: Wine[] = [
   {
     name: "2019 Pinot Gris",
-    image: "/pinor-gris-small.jpg",
+    image: "/pinorGris.jpg",
     description:
       "Refreshing and crisp. Unique to the micro climate of Ancient Hill.",
     price: "$20.79",
   },
   {
     name: "2019 Gewurztraminer",
-    image: "/gewurztraminer-small.jpg",
+    image: "/gewurztraminer.jpg",
     description: "Floral and slightly sweet. A delicious Gewurztraminer.",
     price: "$19.91",
   },
@@ -67,12 +67,8 @@ function SingleWine() {
   const { wineId } = Route.useParams();
   const [wine, setWine] = useState<Wine | undefined>();
 
-  const getWineNameFromSlug = (slug: string | undefined): string => {
-    return slug ? decodeURIComponent(slug).replace(/-/g, " ") : "";
-  };
-
   useEffect(() => {
-    const wineName = getWineNameFromSlug(wineId);
+    const wineName = wineId;
     const foundWine = allWines.find(
       (w) => w.name.toLowerCase() === wineName.toLowerCase()
     );
