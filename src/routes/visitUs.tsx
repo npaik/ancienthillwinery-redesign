@@ -7,20 +7,20 @@ export const Route = createFileRoute("/visitUs")({
 function ContactUs() {
   return (
     <>
-      <div className="flex justify-center items-center w-full mb-10">
+      <div className="flex justify-center items-center w-full mb-6">
         <div className="w-1/3">
           <div className="text-center mt-4">
-            <h3 className="text-3xl font-bold mb-6">Visit Us</h3>
-            <p className="mt-2">4918 Anderson Road, Kelowna, BC</p>
-            <p className="mt-2">Phone: 250-491-2766</p>
-            <p className="mt-2">Email: info@ancienthillwinery.com</p>
+            <h3 className="text-2xl font-bold mb-4">Visit Us</h3>
+            <p>4918 Anderson Road, Kelowna, BC</p>
+            <p>Phone: 250-491-2766</p>
+            <p>Email: info@ancienthillwinery.com</p>
           </div>
           <div className="text-center">
-            <h3 className="text-xl font-bold mt-10">Opening Hours</h3>
-            <p className="mt-2">10:30am - 5:30pm</p>
+            <h3 className="text-lg font-bold mt-4">Opening Hours</h3>
+            <p>10:30am - 5:30pm</p>
           </div>
 
-          <h2 className="text-xl font-bold text-center mt-4 mb-6">
+          <h2 className="text-lg font-bold text-center mt-4 mb-4">
             Directions
           </h2>
           <div className="border-2 border-[#5B3003] rounded-lg">

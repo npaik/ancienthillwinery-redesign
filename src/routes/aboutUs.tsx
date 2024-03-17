@@ -23,16 +23,16 @@ function AboutUs() {
           </aside>
 
           <main className="w-full md:w-3/4">
-            <h1 className="text-3xl font-bold mb-6">Our Story</h1>
+            <h1 className="text-2xl font-bold mb-6">Our Story</h1>
             <section className="mb-8">
-              <h2 className="text-xl font-semibold mb-4">Founding Family</h2>
-              <p className="mb-4">
+              <h2 className="text-lg font-semibold mb-4">Founding Family</h2>
+              <p>
                 Richard and Jitske Kamphuys are the owners of Ancient Hill
                 Estate Winery.
               </p>
             </section>
-            <section className="mb-8">
-              <h2 className="text-xl font-semibold mb-4">A Rich History</h2>
+            <section>
+              <h2 className="text-lg font-semibold mb-4">A Rich History</h2>
               <p className="mb-4">
                 Tiring of big city life in the Netherlands, we decided to ‘go
                 west’ and seek out a lifestyle more in tune with nature. In 1992
@@ -55,8 +55,8 @@ function AboutUs() {
                 this day.
               </p>
             </section>
-            <section className="mb-8">
-              <h2 className="text-xl font-semibold mb-4">The Vineyard Today</h2>
+            <section>
+              <h2 className="text-lg font-semibold mb-4">The Vineyard Today</h2>
               <p className="mb-4">
                 In 2005, the vineyard at Ancient Hill was planted. The varieties
                 planted were: Baco Noir, Pinot Noir, Lemberger, Zweigelt,
@@ -72,8 +72,8 @@ function AboutUs() {
                 Hill’s first vintage. The results are equally superb.
               </p>
             </section>
-            <section className="mb-8">
-              <h2 className="text-xl font-semibold mb-4">The Land's Legacy</h2>
+            <section>
+              <h2 className="text-lg font-semibold mb-4">The Land's Legacy</h2>
               <p className="mb-4">
                 The name ‘Ancient Hill’ was chosen as an acknowledgement of the
                 natural forces that created the terroir of our vineyard. Around
@@ -85,8 +85,8 @@ function AboutUs() {
                 part of the shores of ‘Lake Penticton’.
               </p>
             </section>
-            <section className="mb-8">
-              <h2 className="text-xl font-semibold mb-4">
+            <section>
+              <h2 className="text-lg font-semibold mb-4">
                 Symbolism of Our Logo
               </h2>
               <p className="mb-4">

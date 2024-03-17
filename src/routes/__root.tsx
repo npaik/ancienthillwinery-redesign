@@ -30,31 +30,31 @@ function RootLayout() {
               </Link>
               <Link
                 to="/aboutUs"
-                className="text-xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
+                className="text-lg font-medium text-gray-700 hover:text-gray-900 hover:underline"
               >
                 ABOUT US
               </Link>
               <Link
                 to="/ourWines"
-                className="text-xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
+                className="text-lg font-medium text-gray-700 hover:text-gray-900 hover:underline"
               >
                 OUR WINES
               </Link>
               <Link
                 to="/wineShop"
-                className="text-xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
+                className="text-lg font-medium text-gray-700 hover:text-gray-900 hover:underline"
               >
                 SHOP & PATIO
               </Link>
               <Link
                 to="/whereToBuy"
-                className="text-xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
+                className="text-lg font-medium text-gray-700 hover:text-gray-900 hover:underline"
               >
                 WHERE TO BUY
               </Link>
               <Link
                 to="/visitUs"
-                className="text-xl font-medium text-gray-700 hover:text-gray-900 hover:underline"
+                className="text-lg font-medium text-gray-700 hover:text-gray-900 hover:underline"
               >
                 VISIT US
               </Link>
@@ -70,7 +70,7 @@ function RootLayout() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="py-3 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-center">
               <div>
-                <h4 className="mb-3 text-2xl">Address</h4>
+                <h4 className="mb-3 text-lg">Address</h4>
                 <p>4918 Anderson Road</p>
                 <p>Kelowna, BC, V1X 7V7</p>
                 <p>Phone: 250 491 2766</p>
@@ -78,14 +78,14 @@ function RootLayout() {
               </div>
 
               <div>
-                <h4 className="mb-3 text-2xl">Opening hours</h4>
+                <h4 className="mb-3 text-lg">Opening hours</h4>
                 <p>March 1 - October 31:</p>
                 <p>Daily 10:30am to 5:30pm</p>
                 <p>November 1 - February 28:</p>
                 <p>Contact Us (phone or email)</p>
               </div>
               <div>
-                <h4 className="mb-3 text-2xl">Get Connected</h4>
+                <h4 className="mb-3 text-lg">Get Connected</h4>
                 <a
                   href="https://www.facebook.com/AncientHillWinery/"
                   className="inline-block ml-1 mr-1"

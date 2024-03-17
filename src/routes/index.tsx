@@ -13,22 +13,22 @@ function HomePage() {
           alt="Ancient Hill Vineyard"
           className="w-screen object-cover"
         />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-          <h2 className="text-3xl font-bold my-6 pb-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-t6 text-center">
+          <h2 className="text-2xl font-bold my-6">
             Welcome to Ancient Hill Estate Winery
           </h2>
-          <p className="mb-4 text-lg pb-10">
+          <p className="mb-4 text-md">
             Nestled in the heart of the beautiful, rural Ellison area of North
             Kelowna and directly across from the Kelowna Airport, our boutique
             winery stands on land rich with history, originally planted to
             grapes more than 60 years ago.
           </p>
-          <p className="mb-4 text-lg pb-10">
+          <p className="mb-4 text-md">
             At Ancient Hill, we specialize in small lots of tasty wines, crafted
             with care from grapes grown in our own vineyard and processed
             on-site in our European style winery.
           </p>
-          <p className="mb-4 text-lg">
+          <p className="mb-4 text-md">
             We invite you to visit us and experience a working winery in action.
             Taste the unique flavors of our wines in the wine shop, or savor
             them by the glass while relaxing on our patio overlooking the

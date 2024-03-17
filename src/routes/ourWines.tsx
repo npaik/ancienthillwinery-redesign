@@ -101,46 +101,46 @@ function OurWines() {
           alt="Ancient Hill Vineyard"
           className="w-screen h-[50vh] object-cover"
         />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
-          <h2 className="text-3xl font-bold my-6 ">Explore our Wines</h2>
-          <p className="text-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold my-6">Explore our Wines</h2>
+          <p className="text-md">
             Ancient Hill is an Estate Winery. Our wines are created from the
             grapes grown on site. All fermentation, processing, aging and
             bottling takes place on site as well.
           </p>
-          <p className="text-lg">
+          <p className="text-md">
             All grape varietals planted at Ancient Hill were chosen because they
             would ripen well at our vineyard site. And ripen well they do.
           </p>
-          <p className="text-lg">
+          <p className="text-md">
             Our cooler location and terroir have favoured us with aromatic
             wines, crafted under guidance of our accomplished, consulting
             winemaker Christine Leroux.
           </p>
-          <p className="text-lg">
+          <p className="text-md">
             To be enjoyed paired with your favourite food or by the glass on any
             occasion ……the choice is yours.
           </p>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 text-center">
-          <h2 className="text-2xl font-bold pb-4">Red Wines</h2>
+          <h2 className="text-lg font-semibold pb-4">Red Wines</h2>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-2">
             {renderWines(redWines)}
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
-          <h2 className="text-2xl font-bold pb-6">White Wines</h2>
+          <h2 className="text-lg font-semibold pb-6">White Wines</h2>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             {renderWines(whiteWines)}
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 text-center">
-          <h2 className="text-2xl font-bold pb-6">Rose Wines</h2>
+          <h2 className="text-lg font-semibold pb-6">Rose Wines</h2>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             {renderWines(roseWines)}
           </div>
         </div>
-        <p className="mb-4 text-center text-lg pb-6">
+        <p className="mb-4 text-center text-md">
           Please note: All our wine prices listed here are subject to 5% GST and
           10% BC PST.
         </p>
